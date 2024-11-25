@@ -1,0 +1,67 @@
+/* General Styles */
+.full-width-section {
+  padding: 2rem;
+}
+
+.full-width-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.about-us-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures responsiveness */
+  gap: 1.5rem;
+}
+
+.about-us-image img {
+  width: 100%;
+  max-width: 400px; /* Restrict maximum image width */
+}
+
+.about-us-content {
+  flex: 1;
+  max-width: 600px;
+  background-color: rgb(38, 72, 115);
+  border-radius: 10px;
+  margin-left:30px;
+}
+
+.about-us-content p {
+  color:white;
+  text-align: justify;
+  margin:15px;
+ 
+
+}
+
+/* Desktop and Laptop Styles */
+@media (min-width: 768px) {
+  .about-us-container {
+      flex-direction: row; /* Image left, content right */
+  }
+
+  .about-us-image {
+      flex: 1; /* Adjust the size of the image container */
+  }
+
+  .about-us-content {
+      flex: 2; /* Adjust the size of the content container */
+  }
+}
+
+/* Mobile and Tablet Styles */
+@media (max-width: 767px) {
+  .about-us-container {
+      flex-direction: column; /* Stack image and content vertically */
+  }
+
+  .about-us-image {
+      margin-bottom: 1rem; /* Add spacing between image and content */
+  }
+  .about-us-content{
+    margin:5px;
+
+  }
+}

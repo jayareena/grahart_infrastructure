@@ -1,0 +1,137 @@
+/* General container styling */
+.services-container {
+  text-align: center;
+  margin-top:30px;
+  padding: 20px;
+  max-width: 1200px; /* Limits the width for large screens */
+}
+
+/* Section title styling */
+.services-container h2 {
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #264873;
+  text-align: center;
+}
+
+/* Grid layout for services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adapts column width responsively */
+  gap: 10px !important; 
+  justify-items: center;
+  margin-top:15px;
+  width: 100%;
+}
+
+/* Individual service card */
+.service-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  max-height: 300px;
+  width:400px; /* Limits card width */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Overlay icon styling */
+.icon-overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-overlay .fa {
+  font-size: 2rem;
+  margin-bottom: 15px; /* Space below the icon */
+  color: black; /* Default icon color */
+}
+
+.icon-overlay::before {
+  content: '';
+  position: absolute;
+  left: -10px; /* Offset to the left */
+  width: 25px;
+  height: 25px;
+  background-color: #6d9a30; /* Green square overlay */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+/* Line below the icon */
+.line {
+  width: 40px;
+  height: 2px;
+  background-color: black; /* Default line color */
+  margin: 10px auto;
+}
+
+/* Heading inside card */
+.service-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Hover and active effects */
+.service-card:hover,
+.service-card.active {
+  background-color: #003366; /* Dark blue on hover or active */
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card.active .icon-overlay .fa,
+.service-card:hover .icon-overlay .fa {
+  color: white; /* Changes icon color */
+}
+
+.service-card.active h3,
+.service-card:hover h3 {
+  color: white; /* Changes heading color */
+}
+
+.service-card.active .line,
+.service-card:hover .line {
+  background-color: white; /* Changes line color */
+}
+
+/* Responsive Design Adjustments */
+/* For Tablets */
+@media (max-width: 1024px) {
+
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusts for smaller screens */
+    gap: 20px;
+  }
+
+  .service-card {
+   
+    padding: 20px;
+    margin-bottom:30px;
+  }
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 768px) {
+
+  .services-grid {
+    grid-template-columns: 1fr; /* Single-column layout */
+  }
+
+  .service-card {
+    width: 200px;
+    padding: 15px;
+    margin:20px;
+  }
+  .service-card h3 {
+    font-size: 1rem;
+  }
+}

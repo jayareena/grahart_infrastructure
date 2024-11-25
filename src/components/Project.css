@@ -1,0 +1,95 @@
+/* Overall Container */
+.projectss-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Banner Section */
+.pro-container {
+  width: 100%;
+}
+
+.projectssimage-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projectssoverlay-text-container {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+}
+
+.projectssoverlay-text {
+  color: #264873;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 70%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    font-size: 4rem; /* Adjust size for desktop */
+    z-index: 2;
+    font-weight: bold;
+}
+
+/* Projects Grid Section */
+.projectss-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));;
+  gap: 20px;
+}
+
+.projectss-card {
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.projectss-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.projectss-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 3px solid #264873;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .projectssoverlay-text {
+    font-size: 2rem;
+  }
+
+  .projectss-image {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projectssoverlay-text {
+    font-size: 1.5rem;
+  }
+
+  .projectss-image {
+    height: 200px;
+  }
+  .projectssimage-container {
+    width: auto;
+    height: 300px;
+  }
+}

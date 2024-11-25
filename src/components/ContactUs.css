@@ -1,0 +1,89 @@
+.image-container-contactus {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.background-image {
+  width: 100%;
+  height: 500px; 
+  filter: blur(3px);/* This height can be adjusted for smaller screens */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+.slogan-overlay-contactus {
+  position: absolute;
+  top: 50%; /* Vertically center */
+  left: 50%; /* Horizontally center */
+  transform: translate(-50%, -50%);
+  color: white; /* Ensure the text color contrasts with the image */
+  text-align: center;
+  z-index: 10; /* Ensure it's on top of the image */
+}
+
+/* Responsive Headings */
+.slogan-overlay-contactus h2 { /* Base font size */
+  margin: 0; /* Remove default margin */
+}
+
+.slogan-overlay-contactus h4 { 
+  font-size:1.5rem;/* Base font size */
+  margin: 10px 0; /* Add some margin for spacing */
+  color:black;
+}
+
+/* Button Styles */
+.contactus-button {
+  margin-top: 30px; /* Add some space between the image/text and the button */
+  text-align: center;
+}
+
+.btn-contact-us {
+  background-color:#6d9a30; /* Customize the button color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem; /* Base button font size */
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.btn-contact-us:hover {
+  background-color: #1b3b5d; /* Darker shade on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+  h4 {
+      font-size: 16px; /* Adjust subheading size for tablets */
+  }
+
+  .background-image {
+      height: 400px; /* Adjust height for tablets */
+  }
+
+  .btn-contact-us {
+      padding: 8px 16px; /* Adjust button padding */
+  }
+}
+
+@media (max-width: 480px) {
+  h4 {
+      font-size: 16px; /* Further adjust subheading size for mobile */
+  }
+
+  .background-image {
+      height: 450px; /* Adjust height for mobile */
+  }
+
+  .btn-contact-us {
+      padding: 6px 12px; /* Adjust button padding */
+  }
+}
