@@ -10,7 +10,7 @@ import './App.css';
 
 function App() {
   return (
-      <Router basename="/grahart_infrastructure">
+      <Router basename="/">
       <Header />
       <div className="main-content">
         <Routes>
